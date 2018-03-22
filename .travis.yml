@@ -1,0 +1,41 @@
+language: php
+
+php:
+  - 7.1
+  - 7.2
+
+# faster builds on new travis setup not using sudo
+sudo: false
+
+# cache vendor dirs
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+install:
+  - travis_retry composer self-update && composer --version
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+  - travis_retry composer install --dev --prefer-dist --no-interaction
+# install php extensions
+  - |
+    pear config-set preferred_state beta
+    printf "\n" | pecl install imagick
+    # gmagick is not installed on travis currently
+    #printf "\n" | pecl install gmagick
+# setup database:
+  - mysql -e 'CREATE DATABASE yii2test;';
+# setup application:
+  - |
+    php install.php init/all --config=tests/travis/install-config.php --interactive=0
+    sed -i "s/'cookieValidationKey' => ''/'cookieValidationKey' => 'testkey'/" config/web.php
+    cd tests/codeception/backend && codecept build
+    cd ../console && codecept build
+    cd ../../../
+
+before_script:
+  - cd tests/codeception/bin && php yii migrate --interactive=0 && cd ../../..
+
+script:
+  - |
+    php -S localhost:8080 -t web > /dev/null 2>&1 &
+        composer exec 'codecept run -s acceptance' -vv
