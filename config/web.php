@@ -59,6 +59,12 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'urlManager' => [
+            '__class' => \yii\web\UrlManager::class,
+            'rules' => require 'urls.php',
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+        ],
 
     ],
     'params' => $params,
