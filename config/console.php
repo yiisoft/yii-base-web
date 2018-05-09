@@ -16,26 +16,10 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
-    'logger' => [
-        'traceLevel' => YII_DEBUG ? 3 : 0,
-        'targets' => [
-            [
-                '__class' => yii\log\FileTarget::class,
-                'levels' => ['error', 'warning'],
-            ],
-        ],
-    ],
+    'logger' => require 'logger.php',
     'components' => [
-        'cache' => [
-            '__class' => yii\caching\Cache::class,
-            'handler' => [
-                '__class' => yii\caching\FileCache::class,
-                'keyPrefix' => 'my-project',
-            ],
-        ],
-        'mailer' => [
-            '__class' => yii\swiftmailer\Mailer::class,
-        ],
+        'cache' => require 'cache.php',
+        'mailer' => require 'mailer.php',
         'mutex' => [
             '__class' => yii\mutex\FileMutex::class
         ],
