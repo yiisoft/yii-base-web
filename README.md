@@ -17,7 +17,8 @@ features to your application.
 [![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app.svg)](https://packagist.org/packages/yiisoft/yii2-app)
 [![Build Status](https://travis-ci.org/yiisoft/yii2-app.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app)
 
-# DIRECTORY STRUCTURE
+DIRECTORY STRUCTURE
+-------------------
 
 ```
 bin/
@@ -38,13 +39,15 @@ vendor/             contains dependent 3rd-party packages
 composer.json
 ```
 
-# REQUIREMENTS
+REQUIREMENTS
+------------
  
 
 The minimum requirement by this project template that your Web server supports PHP 7.1.
 
 
-# INSTALLATION
+INSTALLATION
+------------
 
 If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
 at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
@@ -60,6 +63,22 @@ directly under the Web root.
 
 ~~~
 http://localhost/
+~~~
+
+### Docker
+
+Clone the repository and install vendor packages
+
+    docker-compose run --rm php composer install
+    
+Start application stack
+
+    docker-compose up -d
+    
+Access in your browser via
+
+~~~
+http://docker.host:30080
 ~~~
 
 CONFIGURATION
