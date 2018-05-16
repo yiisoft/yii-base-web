@@ -23,6 +23,9 @@ $config = [
         ],
     ],
     'components' => [
+        'user' => [
+            'identityClass' => 'app\models\User', // User must implement the IdentityInterface
+        ],
         'cache' => [
             '__class' => yii\caching\Cache::class,
             'handler' => [
