@@ -71,7 +71,11 @@ AppAsset::register($this);
     <div class="container">
         <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-right">
+            <?= \Yii::t('yii', 'Powered by {yii}', [
+                'yii' => '<a href="http://www.yiiframework.com/" rel="external">' . \Yii::t('yii', 'Yii Framework') . '</a>',
+            ]) ?>
+        </p>
     </div>
 </footer>
 
