@@ -1,6 +1,6 @@
 {
     "name": "yiisoft/yii2-app",
-    "description": "Yii 2.1 project template",
+    "description": "Yii 3.0 project template",
     "keywords": ["yii2", "framework", "project template"],
     "homepage": "https://github.com/yiisoft/yii2-app",
     "type": "project",
@@ -24,7 +24,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1.0",
-        "yiisoft/yii2": "2.1.x-dev",
+        "yiisoft/yii2": "3.0.x-dev",
         "yiisoft/yii2-jquery": "1.0.x-dev",
         "yiisoft/yii2-captcha": "1.0.x-dev",
         "yiisoft/yii2-bootstrap": "2.2.x-dev",
