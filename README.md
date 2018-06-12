@@ -6,16 +6,16 @@
     <br>
 </p>
 
-Yii 3.0 Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
+Yii 3.0 Project Template is a skeleton [Yii](http://www.yiiframework.com/) application best for
 rapidly creating projects.
 
 The template contains the basic features including user login/logout and a contact page.
 It includes all commonly used configurations that would allow you to focus on adding new
 features to your application.
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app.svg)](https://packagist.org/packages/yiisoft/yii2-app)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app.svg)](https://packagist.org/packages/yiisoft/yii2-app)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app)
+[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/app.svg)](https://packagist.org/packages/yiisoft/app)
+[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/app.svg)](https://packagist.org/packages/yiisoft/app)
+[![Build Status](https://travis-ci.org/yiisoft/app.svg?branch=master)](https://travis-ci.org/yiisoft/app)
 
 DIRECTORY STRUCTURE
 -------------------
@@ -55,15 +55,12 @@ at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
 You can then install this project template using the following command:
 
 ~~~
-composer create-project --prefer-dist --stability=dev yiisoft/yii2-app myapp
+composer create-project --prefer-dist --stability=dev yiisoft/app myapp
+cd myapp
+./yii serve
 ~~~
 
-Now you should be able to access the application through the following URL, assuming `basic` is the directory
-directly under the Web root.
-
-~~~
-http://localhost/
-~~~
+Now you should be able to access the application.
 
 ### Docker
 
