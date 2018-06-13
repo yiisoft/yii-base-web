@@ -9,6 +9,6 @@ services:
       - ./composer.json:/app/composer.json
       - ./config:/app/config
       - ./src:/app/src
-      - ./public:/app/web
+      - ./public:/app/public
       - ./vendor:/app/vendor
       - ~/.composer-docker/cache:/root/.composer/cache:delegated
