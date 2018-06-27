@@ -18,16 +18,15 @@ use yii\console\ExitCode;
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @since 2.0
  */
-class HelloController extends Controller
+class AppController extends Controller
 {
     /**
-     * This command echoes what you have entered as the message.
-     * @param string $message the message to be echoed.
+     * Print application id
      * @return int Exit code
      */
-    public function actionIndex($message = 'hello world')
+    public function actionIndex()
     {
-        echo $message . "\n";
+        echo \Yii::$app->id . "\n";
 
         return ExitCode::OK;
     }
