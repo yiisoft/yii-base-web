@@ -2,7 +2,7 @@
 
 return [
     '__class' => yii\db\Connection::class,
-    'dsn' => 'mysql:host=localhost;dbname=myproject',
+    'dsn' => 'mysql:host=localhost;dbname=app',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
