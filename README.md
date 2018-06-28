@@ -26,11 +26,8 @@ config/             contains application configurations
 public/             contains the entry script for a web server
 runtime/            contains files generated during runtime
 src/
-  assets/             contains assets definition
   commands/           contains console commands (controllers)
   controllers/        contains Web controller classes
-  mail/               contains view files for e-mails
-  models/             contains model classes
   views/              contains view files for the Web application
 tests/              contains various tests for the basic application
 vendor/             contains dependent 3rd-party packages
@@ -83,7 +80,7 @@ CONFIGURATION
 
 ### Database
 
-Edit the file `config/db.php` with real data, for example:
+Edit the file `config/common.php` with real data, for example:
 
 ```php
 return [

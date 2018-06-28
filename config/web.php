@@ -1,7 +1,6 @@
 <?php
 
-$params = require __DIR__ . '/params.php';
-$db = require __DIR__ . '/db.php';
+$db = require __DIR__ . '/common.php';
 
 $config = [
     'id' => 'my-project',
@@ -64,13 +63,12 @@ $config = [
         ],
         'urlManager' => [
             '__class' => \yii\web\UrlManager::class,
-            'rules' => require 'urls.php',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
 
     ],
-    'params' => $params,
+    'params' => []
 ];
 
 if (YII_ENV_DEV) {
