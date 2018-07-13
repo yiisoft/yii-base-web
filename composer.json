@@ -44,10 +44,10 @@
         }
     ],
     "autoload": {
-        "psr-4": {"app\\": "src"}
+        "psr-4": {"yii\\app\\": "src"}
     },
     "autoload-dev": {
-        "psr-4": {"tests\\": "tests"}
+        "psr-4": {"yii\\tests\\": "tests"}
     },
     "config": {
         "process-timeout": 1800
