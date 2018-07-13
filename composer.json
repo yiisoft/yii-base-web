@@ -24,6 +24,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1.0",
+        "hiqdev/composer-config-plugin": "3.0.x-dev",
         "hiqsol/web": "dev-master",
         "hiqsol/log": "dev-master",
         "yiisoft/di": "dev-master",
