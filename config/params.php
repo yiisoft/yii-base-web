@@ -1,4 +1,5 @@
 <?php
-return [
 
+return [
+    'favicon.ico' => '@yii/app/../public/favicon.ico',
 ];
