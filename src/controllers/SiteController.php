@@ -1,9 +1,9 @@
 <?php
 
-namespace app\controllers;
+namespace yii\app\controllers;
 
-use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Yii;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
