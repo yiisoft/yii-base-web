@@ -25,8 +25,8 @@
     "require": {
         "php": ">=7.1.0",
         "hiqdev/composer-config-plugin": "3.0.x-dev",
-        "hiqsol/web": "dev-master",
-        "hiqsol/log": "dev-master",
+        "yiisoft/yii-web": "dev-master",
+        "yiisoft/log": "dev-master",
         "yiisoft/di": "dev-master",
         "yiisoft/yii2-jquery": "1.0.x-dev",
         "yiisoft/yii2-captcha": "1.0.x-dev",
