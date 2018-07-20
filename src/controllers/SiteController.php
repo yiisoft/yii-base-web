@@ -2,11 +2,10 @@
 
 namespace yii\app\controllers;
 
-use yii\filters\AccessControl;
-use yii\helpers\Yii;
 use yii\web\Controller;
 use yii\web\Response;
-use yii\filters\VerbFilter;
+use yii\web\filters\AccessControl;
+use yii\web\filters\VerbFilter;
 use app\forms\LoginForm;
 use app\forms\ContactForm;
 
@@ -19,7 +18,7 @@ class SiteController extends Controller
     {
         return [
             'access' => [
-                'class' => AccessControl::class,
+                '__class' => AccessControl::class,
                 'only' => ['logout'],
                 'rules' => [
                     [
@@ -30,7 +29,7 @@ class SiteController extends Controller
                 ],
             ],
             'verbs' => [
-                'class' => VerbFilter::class,
+                '__class' => VerbFilter::class,
                 'actions' => [
                     'logout' => ['POST'],
                 ],
@@ -45,10 +44,10 @@ class SiteController extends Controller
     {
         return [
             'error' => [
-                'class' => 'yii\web\ErrorAction',
+                '__class' => \yii\web\ErrorAction::class,
             ],
             'captcha' => [
-                'class' => 'yii\captcha\CaptchaAction',
+                '__class' => \yii\captcha\CaptchaAction::class,
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
@@ -71,12 +70,12 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!Yii::$app->user->isGuest) {
+        if (!$this->app->user->isGuest) {
             return $this->goHome();
         }
 
         $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
+        if ($model->load($this->app->request->post()) && $model->login()) {
             return $this->goBack();
         }
 
@@ -93,7 +92,7 @@ class SiteController extends Controller
      */
     public function actionLogout()
     {
-        Yii::$app->user->logout();
+        $this->app->user->logout();
 
         return $this->goHome();
     }
@@ -106,8 +105,8 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
+        if ($model->load($this->app->request->post()) && $model->contact($this->app->params['adminEmail'])) {
+            $this->app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
         }

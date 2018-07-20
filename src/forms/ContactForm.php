@@ -1,8 +1,7 @@
 <?php
 
-namespace app\forms;
+namespace yii\app\forms;
 
-use Yii;
 use yii\base\Model;
 
 /**
@@ -50,7 +49,7 @@ class ContactForm extends Model
     public function contact($email)
     {
         if ($this->validate()) {
-            Yii::$app->mailer->compose()
+            $this->app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
                 ->setSubject($this->subject)

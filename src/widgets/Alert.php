@@ -1,7 +1,6 @@
 <?php
-namespace app\widgets;
 
-use Yii;
+namespace yii\app\widgets;
 
 /**
  * Alert widget renders a message from session flash. All flash messages are displayed
@@ -49,7 +48,7 @@ class Alert extends \yii\bootstrap\Widget
      */
     public function run()
     {
-        $session = Yii::$app->session;
+        $session = $this->app->session;
         $flashes = $session->getAllFlashes();
         $appendClass = isset($this->options['class']) ? ' ' . $this->options['class'] : '';
 

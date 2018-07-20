@@ -4,8 +4,7 @@ return [
     'app' => [
         'basePath' => dirname(__DIR__) . '/src',
         'runtimePath' => dirname(__DIR__) . '/runtime',
-        'vendorPath' => dirname(__DIR__) . '/vendor',
-        'controllerNamespace' => 'yii\app\commands',
+        'controllerNamespace' => \yii\app\commands::class,
         /*
         'controllerMap' => [
             'fixture' => [ // Fixture generation command line.

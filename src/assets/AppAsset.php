@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace app\assets;
+namespace yii\app\assets;
 
 use yii\web\AssetBundle;
 
@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $basePath = '@webroot';
+    public $sourcePath = '@yii/app/../public';
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
