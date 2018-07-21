@@ -3,7 +3,6 @@
 return [
     'app' => [
         'basePath' => dirname(__DIR__) . '/src',
-        'runtimePath' => dirname(__DIR__) . '/runtime',
         'controllerNamespace' => \yii\app\commands::class,
         /*
         'controllerMap' => [
