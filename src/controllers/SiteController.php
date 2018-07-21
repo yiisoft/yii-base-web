@@ -6,8 +6,8 @@ use yii\web\Controller;
 use yii\web\Response;
 use yii\web\filters\AccessControl;
 use yii\web\filters\VerbFilter;
-use app\forms\LoginForm;
-use app\forms\ContactForm;
+use yii\app\forms\LoginForm;
+use yii\app\forms\ContactForm;
 
 class SiteController extends Controller
 {
