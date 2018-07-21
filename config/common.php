@@ -7,7 +7,7 @@ return [
         /*
         'controllerMap' => [
             'fixture' => [ // Fixture generation command line.
-                'class' => 'yii\faker\FixtureController',
+                '__class' => 'yii\faker\FixtureController',
             ],
         ],
         */
