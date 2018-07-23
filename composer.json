@@ -25,6 +25,7 @@
     "require": {
         "php": ">=7.1.0",
         "hiqdev/composer-config-plugin": "3.0.x-dev",
+        "vlucas/phpdotenv": "^2.5",
         "yiisoft/yii-web": "dev-master",
         "yiisoft/di": "dev-master",
         "yiisoft/log": "dev-master",
