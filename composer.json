@@ -24,8 +24,6 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1.0",
-        "hiqdev/composer-config-plugin": "3.0.x-dev",
-        "vlucas/phpdotenv": "^2.5",
         "yiisoft/yii-web": "dev-master",
         "yiisoft/yii-console": "dev-master",
         "yiisoft/di": "dev-master",
@@ -34,7 +32,9 @@
         "yiisoft/yii2-jquery": "1.0.x-dev",
         "yiisoft/yii2-captcha": "dev-sol",
         "yiisoft/yii2-bootstrap": "2.2.x-dev",
-        "yiisoft/yii2-swiftmailer": "dev-sol"
+        "yiisoft/yii2-swiftmailer": "dev-sol",
+        "vlucas/phpdotenv": "^2.5",
+        "hiqdev/composer-config-plugin": "1.0.x-dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "2.1.x-dev",
@@ -58,7 +58,7 @@
         "psr-4": {"yii\\app\\": "src"}
     },
     "autoload-dev": {
-        "psr-4": {"yii\\tests\\": "tests"}
+        "psr-4": {"yii\\app\\tests\\": "tests"}
     },
     "config": {
         "process-timeout": 1800
