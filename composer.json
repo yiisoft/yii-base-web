@@ -34,7 +34,7 @@
         "yiisoft/yii2-bootstrap": "2.2.x-dev",
         "yiisoft/yii2-swiftmailer": "dev-sol",
         "vlucas/phpdotenv": "^2.5",
-        "hiqdev/composer-config-plugin": "1.0.x-dev"
+        "hiqdev/composer-config-plugin": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "2.1.x-dev",
