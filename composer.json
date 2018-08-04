@@ -31,7 +31,7 @@
         "yiisoft/cache": "dev-master",
         "yiisoft/yii-jquery": "dev-master",
         "yiisoft/yii-captcha": "dev-master",
-        "yiisoft/yii-bootstrap": "dev-master",
+        "yiisoft/yii-bootstrap4": "^3.0",
         "yiisoft/yii-swiftmailer": "dev-master",
         "vlucas/phpdotenv": "^2.5",
         "hiqdev/composer-config-plugin": "dev-master"
