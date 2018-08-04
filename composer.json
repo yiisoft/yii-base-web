@@ -29,17 +29,17 @@
         "yiisoft/di": "dev-master",
         "yiisoft/log": "dev-master",
         "yiisoft/cache": "dev-master",
-        "yiisoft/yii2-jquery": "1.0.x-dev",
-        "yiisoft/yii2-captcha": "dev-sol",
-        "yiisoft/yii2-bootstrap": "2.2.x-dev",
-        "yiisoft/yii2-swiftmailer": "dev-sol",
+        "yiisoft/yii-jquery": "dev-master",
+        "yiisoft/yii-captcha": "dev-master",
+        "yiisoft/yii-bootstrap": "dev-master",
+        "yiisoft/yii-swiftmailer": "dev-master",
         "vlucas/phpdotenv": "^2.5",
         "hiqdev/composer-config-plugin": "dev-master"
     },
     "require-dev": {
-        "yiisoft/yii2-debug": "2.1.x-dev",
-        "yiisoft/yii2-gii": "2.1.x-dev",
-        "phpunit/phpunit": "~7.0.2"
+        "yiisoft/yii-debug": "dev-master",
+        "yiisoft/yii-gii": "dev-master",
+        "phpunit/phpunit": "^7.0"
     },
     "extra": {
         "config-plugin": {
