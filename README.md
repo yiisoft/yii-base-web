@@ -1,21 +1,22 @@
 <p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
+    <a href="http://www.yiiframework.com/" target="_blank">
+        <img src="https://www.yiiframework.com/files/logo/yii.png" width="400" alt="Yii Framework" />
     </a>
-    <h1 align="center">Yii 3.0 Project Template</h1>
+    <h1 align="center">Yii Framework Application</h1>
     <br>
 </p>
 
-Yii 3.0 Project Template is a skeleton [Yii](http://www.yiiframework.com/) application best for
-rapidly creating projects.
+This package is [Yii Framework] application best for rapidly creating projects.
 
 The template contains the basic features including user login/logout and a contact page.
 It includes all commonly used configurations that would allow you to focus on adding new
 features to your application.
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/app.svg)](https://packagist.org/packages/yiisoft/app)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/app.svg)](https://packagist.org/packages/yiisoft/app)
-[![Build Status](https://travis-ci.org/yiisoft/app.svg?branch=master)](https://travis-ci.org/yiisoft/app)
+[Yii Framework]: http://www.yiiframework.com/
+
+[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii-app.svg)](https://packagist.org/packages/yiisoft/yii-app)
+[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii-app.svg)](https://packagist.org/packages/yiisoft/yii-app)
+[![Build Status](https://travis-ci.org/yiisoft/yii-app.svg?branch=master)](https://travis-ci.org/yiisoft/yii-app)
 
 DIRECTORY STRUCTURE
 -------------------

@@ -1,14 +1,14 @@
 {
-    "name": "yiisoft/app",
-    "description": "Yii 3.0 project template",
-    "keywords": ["yii2", "framework", "project template"],
-    "homepage": "https://github.com/yiisoft/yii2-app",
-    "type": "project",
+    "name": "yiisoft/yii-app",
+    "description": "Yii Framework Application",
+    "keywords": ["yii", "framework", "application"],
+    "homepage": "https://github.com/yiisoft/yii-app",
+    "type": "library",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/github.com/yiisoft/yii2-app/issues",
+        "issues": "https://github.com/github.com/yiisoft/yii-app/issues",
         "forum": "http://www.yiiframework.com/forum/",
-        "source": "https://github.com/yiisoft/yii2-app"
+        "source": "https://github.com/yiisoft/yii-app"
     },
     "authors": [
         {
