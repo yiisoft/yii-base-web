@@ -1,9 +1,9 @@
 {
     "name": "yiisoft/yii-app",
+    "type": "library",
     "description": "Yii Framework Application",
     "keywords": ["yii", "framework", "application"],
     "homepage": "https://github.com/yiisoft/yii-app",
-    "type": "library",
     "license": "BSD-3-Clause",
     "support": {
         "issues": "https://github.com/github.com/yiisoft/yii-app/issues",
@@ -24,14 +24,14 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1.0",
-        "yiisoft/yii-web": "dev-master",
-        "yiisoft/yii-console": "dev-master",
-        "yiisoft/di": "dev-master",
-        "yiisoft/log": "dev-master",
-        "yiisoft/cache": "dev-master",
-        "yiisoft/yii-jquery": "dev-master",
-        "yiisoft/yii-captcha": "dev-master",
-        "yiisoft/yii-bootstrap4": "^1.0",
+        "yiisoft/yii-web": "^3.0@dev",
+        "yiisoft/yii-console": "^3.0@dev",
+        "yiisoft/di": "^3.0@dev",
+        "yiisoft/log": "^3.0@dev",
+        "yiisoft/cache": "^3.0@dev",
+        "yiisoft/yii-jquery": "^3.0@dev",
+        "yiisoft/yii-captcha": "^3.0@dev",
+        "yiisoft/yii-bootstrap4": "^3.0@dev",
         "yiisoft/yii-swiftmailer": "dev-master",
         "vlucas/phpdotenv": "^2.5",
         "hiqdev/composer-config-plugin": "dev-master"
@@ -43,7 +43,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "3.0.x-dev"
         },
         "config-plugin": {
             "params": "config/params.php",
