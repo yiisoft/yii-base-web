@@ -23,9 +23,9 @@ return [
     ],
 
     'cache' => [
-        '__class' => yii\caching\Cache::class,
+        '__class' => yii\cache\Cache::class,
         'handler' => [
-            '__class' => yii\caching\FileCache::class,
+            '__class' => yii\cache\FileCache::class,
             'keyPrefix' => 'my-project',
         ],
     ],
