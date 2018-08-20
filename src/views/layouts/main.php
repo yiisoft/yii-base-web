@@ -9,7 +9,6 @@ use yii\helpers\Html;
 use yii\helpers\Yii;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
-use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);
 ?>
@@ -33,7 +32,7 @@ AppAsset::register($this);
         'brandLabel' => $this->getApp()->name,
         'brandUrl' => $this->getApp()->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-dark bg-dark navbar-fixed-top navbar-expand-lg',
         ],
     ]);
     echo Nav::widget([
@@ -60,8 +59,8 @@ AppAsset::register($this);
     ?>
 
     <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        <?= \yii\bootstrap4\Breadcrumbs::widget([
+            'links' => $this->params['breadcrumbs'] ?? [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
@@ -70,9 +69,8 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right">
+        <p class="float-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="float-right">
             <?= Yii::t('yii', 'Powered by {yii}', [
                 'yii' => '<a href="http://www.yiiframework.com/" rel="external">' . Yii::t('yii', 'Yii Framework') . '</a>',
             ]) ?>

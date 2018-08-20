@@ -4,6 +4,8 @@ return [
     'app.id' => 'my-project',
     'app.name' => 'MyProject',
 
+    'adminEmail' => 'admin@example.com',
+
     'db.dsn'        => "mysql:host=localhost;dbname=myproject",
     'db.charset'    => 'utf8',
     'db.username'   => 'root',

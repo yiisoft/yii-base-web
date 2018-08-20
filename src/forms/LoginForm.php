@@ -2,7 +2,9 @@
 
 namespace yii\app\forms;
 
+use yii\app\models\User;
 use yii\base\Model;
+use yii\helpers\Yii;
 
 /**
  * LoginForm is the model behind the login form.
@@ -59,7 +61,7 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
-            return $this->app->user->login($this->getUser(), $this->rememberMe ? 3600*24*30 : 0);
+            return Yii::getApp()->getUser()->login($this->getUser(), $this->rememberMe ? 3600*24*30 : 0);
         }
         return false;
     }

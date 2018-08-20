@@ -29,6 +29,7 @@
         "yiisoft/di": "^3.0@dev",
         "yiisoft/log": "^3.0@dev",
         "yiisoft/cache": "^3.0@dev",
+        "yiisoft/active-record": "^3.0@dev",
         "yiisoft/yii-jquery": "^3.0@dev",
         "yiisoft/yii-captcha": "^3.0@dev",
         "yiisoft/yii-bootstrap4": "^3.0@dev",

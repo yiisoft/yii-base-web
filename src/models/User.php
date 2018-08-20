@@ -2,9 +2,10 @@
 
 namespace yii\app\models;
 
+use yii\activerecord\ActiveRecord;
 use yii\exceptions\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
-use yii\db\ActiveRecord;
+use yii\helpers\Yii;
 use yii\web\IdentityInterface;
 
 /**
@@ -25,8 +26,7 @@ class User extends ActiveRecord implements IdentityInterface
 {
     const STATUS_DELETED = 0;
     const STATUS_ACTIVE = 10;
-    
-    
+
     /**
      * {@inheritdoc}
      */
@@ -114,7 +114,7 @@ class User extends ActiveRecord implements IdentityInterface
         }
         
         $timestamp = (int) substr($token, strrpos($token, '_') + 1);
-        $expire = $this->app->params['user.passwordResetTokenExpire'];
+        $expire = Yii::getApp()->params['user.passwordResetTokenExpire'];
         return $timestamp + $expire >= time();
     }
     
@@ -150,7 +150,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function validatePassword($password)
     {
-        return $this->app->security->validatePassword($password, $this->password_hash);
+        return Yii::getApp()->security->validatePassword($password, $this->password_hash);
     }
     
     /**
@@ -160,7 +160,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function setPassword($password)
     {
-        $this->password_hash = $this->app->security->generatePasswordHash($password);
+        $this->password_hash = Yii::getApp()->security->generatePasswordHash($password);
     }
     
     /**
@@ -168,7 +168,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function generateAuthKey()
     {
-        $this->auth_key = $this->app->security->generateRandomString();
+        $this->auth_key = Yii::getApp()->security->generateRandomString();
     }
     
     /**
@@ -176,7 +176,7 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public function generatePasswordResetToken()
     {
-        $this->password_reset_token = $this->app->security->generateRandomString() . '_' . time();
+        $this->password_reset_token = Yii::getApp()->security->generateRandomString() . '_' . time();
     }
     
     /**

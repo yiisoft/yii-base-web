@@ -105,7 +105,7 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactForm();
-        if ($model->load($this->app->request->post()) && $model->contact($this->app->params['adminEmail'])) {
+        if ($model->load($this->app->request->post()) && $model->contact($this->app->params['adminEmail'], $this->app->get('mailer'))) {
             $this->app->session->setFlash('contactFormSubmitted');
 
             return $this->refresh();
