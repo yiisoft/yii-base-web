@@ -1,14 +1,16 @@
 {
-    "name": "yiisoft/yii-app",
+    "name": "yiisoft/yii-base-web",
     "type": "library",
-    "description": "Yii Framework Application",
+    "description": "Yii Framework Web Application Base",
     "keywords": ["yii", "framework", "application"],
-    "homepage": "https://github.com/yiisoft/yii-app",
+    "homepage": "https://github.com/yiisoft/yii-base-web",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/github.com/yiisoft/yii-app/issues",
+        "source": "https://github.com/yiisoft/yii-base-web",
+        "issues": "https://github.com/yiisoft/yii-base-web/issues",
         "forum": "http://www.yiiframework.com/forum/",
-        "source": "https://github.com/yiisoft/yii-app"
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii"
     },
     "authors": [
         {
