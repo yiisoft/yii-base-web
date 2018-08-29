@@ -14,10 +14,12 @@ return [
     ],
 
     'logger' => [
-        'targets' => [
-            [
-                '__class' => yii\log\FileTarget::class,
-                'levels' => ['error', 'warning'],
+        '__construct()' => [
+            'targets' => [
+                [
+                    '__class' => yii\log\FileTarget::class,
+                    'levels' => ['error', 'warning'],
+                ],
             ],
         ],
     ],
