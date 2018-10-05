@@ -42,4 +42,14 @@ return [
         'charset' => $params['db.charset'],
         'enableSchemaCache' => defined('YII_ENV') && YII_ENV !== 'dev',
     ]),
+
+    'translator' => [
+        'translations' => [
+            'yii-base-web' => [
+                '__class' => yii\i18n\PhpMessageSource::class,
+                'sourceLanguage' => 'en-US',
+                'basePath' => '@yii/app/messages',
+            ],
+        ],
+    ],
 ];

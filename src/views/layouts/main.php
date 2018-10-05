@@ -38,11 +38,11 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => $this->app->t('yii', 'Home'), 'url' => ['/site/index']],
+            ['label' => $this->app->t('yii-base-web', 'About'), 'url' => ['/site/about']],
+            ['label' => $this->app->t('yii-base-web', 'Contact'), 'url' => ['/site/contact']],
             $this->getApp()->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => $this->app->t('yii-base-web', 'Login'), 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
