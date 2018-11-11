@@ -5,6 +5,7 @@ services:
     image: yiisoftware/yii2-php:7.2-apache
     ports:
       - 30080:80
+    working_dir: /app/
     volumes:
       - ./composer.json:/app/composer.json
       - ./config:/app/config
