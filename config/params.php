@@ -6,8 +6,7 @@ return [
 
     'adminEmail' => 'admin@example.com',
 
-    'db.dsn'        => "mysql:host=localhost;dbname=myproject",
-    'db.charset'    => 'utf8',
+    'db.dsn'        => "mysql:host=localhost;dbname=myproject;charset=utf8",
     'db.username'   => 'root',
     'db.password'   => '',
 
