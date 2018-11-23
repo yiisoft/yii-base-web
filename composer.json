@@ -66,6 +66,9 @@
         "psr-4": {"yii\\app\\tests\\": "tests"}
     },
     "config": {
-        "process-timeout": 1800
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
     }
 }
