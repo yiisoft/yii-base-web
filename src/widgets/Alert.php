@@ -60,6 +60,7 @@ class Alert extends Widget
                 continue;
             }
 
+            echo "<data id='{$this->id}'>";
             foreach ((array)$flash as $i => $message) {
                 echo Json::encode(
                     [
@@ -68,6 +69,7 @@ class Alert extends Widget
                         'message' => $message
                     ]);
             }
+            echo "</data>";
 
             $session->removeFlash($type);
         }
