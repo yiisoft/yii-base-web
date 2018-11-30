@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Html;
+
 /* @var $this yii\web\View */
 
 $this->title = 'My Yii Application';
@@ -18,34 +20,35 @@ $this->title = 'My Yii Application';
 
         <div class="row">
             <div class="col-lg-4">
-                <h2><?= $this->app->t('yii-base-web', 'Heading') ?></h2>
+                <h2><?= $this->app->t('yii-base-web', 'Info') ?></h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>
+                    This is the Index page. You may modify the following file to customize its content:
+                </p>
 
-                    <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/"><?= $this->app->t('yii-base-web', 'Yii Documentation') ?> &raquo;</a></p>
+                <code><?= __FILE__ ?></code>
+
+
+
             </div>
             <div class="col-lg-4">
-                <h2><?= $this->app->t('yii-base-web', 'Heading') ?></h2>
+                <h2><?= $this->app->t('yii-base-web', 'Pages') ?></h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                    <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/"><?= $this->app->t('yii-base-web', 'Yii Forum') ?> &raquo;</a></p>
+                <p>List of actions in the application-base site controller:</p>
+                <p>
+                    <?= Html::a('About', ['about']) ?>
+                    <?= Html::a('Contact', ['contact']) ?>
+                    <?= Html::a('Login', ['login']) ?>
+                </p>
             </div>
             <div class="col-lg-4">
-                <h2><?= $this->app->t('yii-base-web', 'Heading') ?></h2>
+                <h2><?= $this->app->t('yii-base-web', 'Documentation') ?></h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
+                <p>More information about Yii 3.x Framework online:</p>
 
-                    <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/"><?= $this->app->t('yii-base-web', 'Yii Extensions') ?> &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/"><?= $this->app->t('yii-base-web', 'Yii Forum') ?> &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/"><?= $this->app->t('yii-base-web', 'Yii Documentation') ?> &raquo;</a></p>
+                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/"><?= $this->app->t('yii-base-web', 'Yii Extensions') ?> &raquo;</a></p>
             </div>
         </div>
 

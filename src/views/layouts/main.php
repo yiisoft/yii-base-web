@@ -27,7 +27,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
+    <?php /* example for bootstrap 4 navbar, if yiisoft/yii-bootstrap4 is installed
     NavBar::begin([
         'brandLabel' => $this->getApp()->name,
         'brandUrl' => $this->getApp()->homeUrl,
@@ -55,13 +55,14 @@ AppAsset::register($this);
             )
         ],
     ]);
-    NavBar::end();
+    NavBar::end(); */
     ?>
 
     <div class="container">
-        <?= \yii\bootstrap4\Breadcrumbs::widget([
+        <?php /* example for bootstrap 4 breadcrumbs, if yiisoft/yii-bootstrap4 is installed
+        echo \yii\bootstrap4\Breadcrumbs::widget([
             'links' => $this->params['breadcrumbs'] ?? [],
-        ]) ?>
+        ]) */ ?>
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>

@@ -2,6 +2,7 @@
 
 namespace yii\app\controllers;
 
+use yii\helpers\Yii;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\web\filters\AccessControl;
@@ -60,6 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->app->getSession()->addFlash('info', 'Hello World!');
         return $this->render('index');
     }
 
