@@ -7,8 +7,8 @@ use yii\app\widgets\Alert;
 use yii\app\assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Yii;
-use yii\bootstrap4\Nav;
-use yii\bootstrap4\NavBar;
+use yii\widgets\Menu;
+use yii\widgets\Breadcrumbs;
 
 AppAsset::register($this);
 ?>
@@ -27,27 +27,20 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php /* example for bootstrap 4 navbar, if yiisoft/yii-bootstrap4 is installed
-    NavBar::begin([
-        'brandLabel' => $this->getApp()->name,
-        'brandUrl' => $this->getApp()->homeUrl,
-        'options' => [
-            'class' => 'navbar-dark bg-dark navbar-fixed-top navbar-expand-lg',
-        ],
-    ]);
-    echo Nav::widget([
+    <?= Html::a($this->getApp()->name,$this->getApp()->homeUrl); ?>
+    <?= Menu::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => $this->app->t('yii', 'Home'), 'url' => ['/site/index']],
             ['label' => $this->app->t('yii-base-web', 'About'), 'url' => ['/site/about']],
             ['label' => $this->app->t('yii-base-web', 'Contact'), 'url' => ['/site/contact']],
-            $this->getApp()->user->isGuest ? (
+           true /* TODO: This should be $this->getApp()->user->isGuest */ ? (
                 ['label' => $this->app->t('yii-base-web', 'Login'), 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . $this->getApp()->user->identity->username . ')',
+                    'Logout (' . '$this->getApp()->user->identity->username' . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
@@ -55,14 +48,12 @@ AppAsset::register($this);
             )
         ],
     ]);
-    NavBar::end(); */
     ?>
 
     <div class="container">
-        <?php /* example for bootstrap 4 breadcrumbs, if yiisoft/yii-bootstrap4 is installed
-        echo \yii\bootstrap4\Breadcrumbs::widget([
+        <?= Breadcrumbs::widget([
             'links' => $this->params['breadcrumbs'] ?? [],
-        ]) */ ?>
+        ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>

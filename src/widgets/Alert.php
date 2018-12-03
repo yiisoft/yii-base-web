@@ -54,24 +54,27 @@ class Alert extends Widget
         $session = $this->app->session;
         $flashes = $session->getAllFlashes();
         $appendClass = isset($this->options['class']) ? ' ' . $this->options['class'] : '';
-
+        $html = '';
+        
         foreach ($flashes as $type => $flash) {
             if (!isset($this->alertTypes[$type])) {
                 continue;
             }
 
-            echo "<data id='{$this->id}'>";
+            $html = "<data id='{$this->id}'>";
             foreach ((array)$flash as $i => $message) {
-                echo Json::encode(
+                $html .= Json::encode(
                     [
                         'id' => $this->getId() . '-' . $type . '-' . $i,
                         'type' => $type,
                         'message' => $message
                     ]);
             }
-            echo "</data>";
+            $html .= "</data>";
 
             $session->removeFlash($type);
         }
+
+        return $html;
     }
 }
