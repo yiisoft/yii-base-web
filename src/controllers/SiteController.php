@@ -61,7 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $this->app->getSession()->addFlash('info', 'Hello World!');
+        $this->app->getSession()->addFlash('info', 'Hello World! This is a flash message.');
         return $this->render('index');
     }
 
@@ -72,7 +72,14 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
-        if (!$this->app->user->isGuest) {
+        $requiredPackages = [
+            'rbac' => '\yii\rbac\CheckAccessInterface',
+            'db-mysql' => '\yii\db\mysql\Schema',
+            'yii-bootstrap4' => '\yii\bootstrap4\ActiveForm',
+        ];
+        $setupIncomplete = in_array(false, array_map('class_exists', $requiredPackages));
+
+        if (!$setupIncomplete && !$this->app->user->isGuest) {
             return $this->goHome();
         }
 
@@ -84,6 +91,8 @@ class SiteController extends Controller
         $model->password = '';
         return $this->render('login', [
             'model' => $model,
+            'requiredPackages' => $requiredPackages,
+            'setupIncomplete' => $setupIncomplete,
         ]);
     }
 
@@ -112,8 +121,18 @@ class SiteController extends Controller
 
             return $this->refresh();
         }
+
+        $requiredPackages = [
+            'yii-jquery' => '\yii\jquery\ActiveFormClientScript',
+            'yii-bootstrap4' => '\yii\bootstrap4\ActiveForm',
+            'yii-captcha' => '\yii\captcha\Captcha',
+        ];
+        $setupIncomplete = in_array(false, array_map('class_exists', $requiredPackages));
+
         return $this->render('contact', [
             'model' => $model,
+            'requiredPackages' => $requiredPackages,
+            'setupIncomplete' => $setupIncomplete,
         ]);
     }
 
@@ -126,4 +145,5 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
 }

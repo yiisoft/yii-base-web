@@ -3,6 +3,8 @@
 /** @var yii\web\View $this */
 /** @var yii\bootstrap4\ActiveForm $form */
 /** @var yii\app\forms\LoginForm $model */
+/** @var bool $setupIncomplete */
+/** @var string[] $requiredPackages */
 
 use yii\helpers\Html;
 use yii\bootstrap4\ActiveForm;
@@ -13,6 +15,16 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-login">
     <h1><?= Html::encode($this->title) ?></h1>
 
+    <?php if ($setupIncomplete) : ?>
+        <div class="alert alert-error">
+            In order to be able to access this sample page, you will need to install these required packages:
+            <ul>
+                <?php foreach ($requiredPackages as $package => $class): ?>
+                <li><a href="https://github.com/yiisoft/<?= $package ?>"><?= $package ?></a> (provides <?= $class ?>)</li>
+                <?php endforeach ?>
+            </ul>
+        </div>
+    <?php else: ?>
     <p>Please fill out the following fields to login:</p>
 
     <?php $form = ActiveForm::begin([
@@ -44,4 +56,5 @@ $this->params['breadcrumbs'][] = $this->title;
         You may login with <strong>admin/admin</strong> or <strong>demo/demo</strong>.<br>
         To modify the username/password, please check out the code <code>app\models\User::$users</code>.
     </div>
+    <?php endif ?>
 </div>

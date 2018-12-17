@@ -3,6 +3,8 @@
 /** @var yii\web\View $this */
 /** @var yii\bootstrap4\ActiveForm $form */
 /** @var yii\app\forms\ContactForm $model */
+/** @var bool $setupIncomplete */
+/** @var string[] $requiredPackages */
 
 use yii\bootstrap4\ActiveForm;
 use yii\captcha\Captcha;
@@ -14,7 +16,16 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-contact">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <?php if ($this->app->session->hasFlash('contactFormSubmitted')): ?>
+    <?php if ($setupIncomplete) : ?>
+        <div class="alert alert-error">
+            In order to be able to access this sample page, you will need to install these required packages:
+            <ul>
+                <?php foreach ($requiredPackages as $package => $class): ?>
+                <li><a href="https://github.com/yiisoft/<?= $package ?>"><?= $package ?></a> (provides <?= $class ?>)</li>
+                <?php endforeach ?>
+            </ul>
+        </div>
+    <?php elseif ($this->app->session->hasFlash('contactFormSubmitted')): ?>
         <div class="alert alert-success">
             Thank you for contacting us. We will respond to you as soon as possible.
         </div>
