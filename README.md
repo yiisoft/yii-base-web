@@ -61,7 +61,8 @@ CONFIGURATION
 You should recreate configuration files as needed in your root `config/` directory.
 
 Make sure they are listed in the `extra.config-plugin` entry of your `composer.json` file in order for them
-to be discovered, and remember to run `composer install` every time you change a configuration value.
+to be discovered, and remember to run `composer dump-autoload` (or `composer du`) every time you change a 
+configuration value.
 
 
 **NOTES:**
