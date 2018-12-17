@@ -22,25 +22,11 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    <style>
-        ul.navbar-nav li, ul.breadcrumb li {
-            display: inline-block;
-        }
-        ul.breadcrumb li:not(:last-child):after {
-            content: " > ";
-        }
-        .float-left {
-            float: left;
-        }
-        .float-right {
-            float: right;
-        }
-    </style>
 </head>
 <body>
 <?php $this->beginBody() ?>
 
-<div class="wrap">
+<header>
     <?= Html::a($this->getApp()->name,$this->getApp()->homeUrl); ?>
     <?= Menu::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
@@ -63,25 +49,23 @@ AppAsset::register($this);
         ],
     ]);
     ?>
+</header>
 
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => $this->params['breadcrumbs'] ?? [],
+<main>
+    <?= Breadcrumbs::widget([
+        'links' => $this->params['breadcrumbs'] ?? [],
+    ]) ?>
+    <?= Alert::widget() ?>
+    <?= $content ?>
+</main>
+
+<footer>
+    <p class="float-left">&copy; My Company <?= date('Y') ?></p>
+    <p class="float-right">
+        <?= Yii::t('yii', 'Powered by {yii}', [
+            'yii' => '<a href="http://www.yiiframework.com/" rel="external">' . Yii::t('yii', 'Yii Framework') . '</a>',
         ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="float-left">&copy; My Company <?= date('Y') ?></p>
-        <p class="float-right">
-            <?= Yii::t('yii', 'Powered by {yii}', [
-                'yii' => '<a href="http://www.yiiframework.com/" rel="external">' . Yii::t('yii', 'Yii Framework') . '</a>',
-            ]) ?>
-        </p>
-    </div>
+    </p>
 </footer>
 
 <?php $this->endBody() ?>
