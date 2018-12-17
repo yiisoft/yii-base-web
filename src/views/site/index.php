@@ -23,12 +23,10 @@ $this->title = 'My Yii Application';
                 <h2><?= $this->app->t('yii-base-web', 'Info') ?></h2>
 
                 <p>
-                    This is the Index page. You may modify the following file to customize its content:
+                    This is the Index page. Its content is located at:
                 </p>
 
                 <code><?= Html::encode(__FILE__) ?></code>
-
-
 
             </div>
             <div class="col-lg-4">
