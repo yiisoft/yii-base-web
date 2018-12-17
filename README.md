@@ -64,6 +64,8 @@ Make sure they are listed in the `extra.config-plugin` entry of your `composer.j
 to be discovered, and remember to run `composer dump-autoload` (or `composer du`) every time you change a 
 configuration value.
 
+Refer to [hiqdev/composer-config-plugin](https://github.com/hiqdev/composer-config-plugin#refreshing-config) for more information.
+
 
 **NOTES:**
 - Yii won't create the database for you, this has to be done manually before you can access it.
