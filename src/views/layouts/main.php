@@ -22,6 +22,20 @@ AppAsset::register($this);
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <style>
+        ul.navbar-nav li, ul.breadcrumb li {
+            display: inline-block;
+        }
+        ul.breadcrumb li:not(:last-child):after {
+            content: " > ";
+        }
+        .float-left {
+            float: left;
+        }
+        .float-right {
+            float: right;
+        }
+    </style>
 </head>
 <body>
 <?php $this->beginBody() ?>
