@@ -6,7 +6,10 @@
     <br>
 </p>
 
-This package is [Yii Framework] application best for rapidly creating projects.
+This package is one of the three [Yii Framework] [application bases](https://github.com/yiisoft/docs/blob/master/000-packages.md#yii-project-template-and-application-bases) provided for rapidly creating projects.
+
+> This template is still **experimental** and provided to help you discover Yii 3.
+> If you are looking to develop with the last stable Yii version, use [yii2-app-basic](https://github.com/yiisoft/yii2-app-basic) instead
 
 The template contains the basic features including user login/logout and a contact page.
 It includes all commonly used configurations that would allow you to focus on adding new
@@ -33,7 +36,6 @@ src/
   mail/               contains view files for e-mails
   models/             contains model classes
   views/              contains view files for the Web application
-tests/              contains various tests for the basic application
 vendor/             contains dependent 3rd-party packages
 .env
 .env.dist
@@ -43,65 +45,28 @@ composer.json
 REQUIREMENTS
 ------------
  
-
 The minimum requirement by this project template that your Web server supports PHP 7.1.
 
 
 INSTALLATION
 ------------
 
-If you do not have [Composer](http://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](http://getcomposer.org/doc/00-intro.md#installation-nix).
+Follow the installation of [yii-project-template](https://github.com/yiisoft/yii-project-template#installation) 
+to get started with this template.
 
-You can then install this project template using the following command:
-
-~~~
-composer create-project --prefer-dist --stability=dev yiisoft/app myapp
-cd myapp
-./vendor/bin/yii serve
-~~~
-
-Now you should be able to access the application via `http://localhost:8080/`.
-
-### Docker
-
-Clone the repository and install vendor packages
-
-    docker-compose run --rm php composer install
-    
-Start application stack
-
-    docker-compose up -d
-    
-Access in your browser via
-
-~~~
-http://docker.host:30080
-~~~
 
 CONFIGURATION
 -------------
 
-### Database
+You should recreate configuration files as needed in your root `config/` directory.
 
-Edit the file `config/db.php` with real data, for example:
+Make sure they are listed in the `extra.config-plugin` entry of your `composer.json` file in order for them
+to be discovered, and remember to run `composer dump-autoload` (or `composer du`) every time you change a 
+configuration value.
 
-```php
-return [
-    '__class' => \yii\db\Connection::class,
-    'dsn' => 'mysql:host=localhost;dbname=yii2basic;charset=utf8',
-    'username' => 'root',
-    'password' => '1234',
-];
-```
+Refer to [hiqdev/composer-config-plugin](https://github.com/hiqdev/composer-config-plugin#refreshing-config) for more information.
+
 
 **NOTES:**
 - Yii won't create the database for you, this has to be done manually before you can access it.
 - Check and edit the other files in the `config/` directory to customize your application as required.
-- Refer to the README in the `tests` directory for information specific to basic application tests.
-
-
-TESTING
--------
-
-Tests are located in `tests` directory.
