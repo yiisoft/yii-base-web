@@ -19,4 +19,4 @@ install:
   - travis_retry composer install --dev --prefer-dist --no-interaction
 
 script:
-  - phpunit
+  - ./vendor/bin/phpunit
