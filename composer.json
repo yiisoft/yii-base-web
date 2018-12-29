@@ -36,6 +36,7 @@
         "hiqdev/composer-config-plugin": "dev-master"
     },
     "require-dev": {
+        "foxy/foxy": "^1.0",
         "yiisoft/yii-debug": "dev-master",
         "yiisoft/yii-gii": "dev-master",
         "yiisoft/yii-bootstrap4": "dev-master",
