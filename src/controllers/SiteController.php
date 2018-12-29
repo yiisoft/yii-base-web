@@ -73,9 +73,9 @@ class SiteController extends Controller
     public function actionLogin()
     {
         $requiredPackages = [
-            'rbac' => '\yii\rbac\CheckAccessInterface',
-            'db-mysql' => '\yii\db\mysql\Schema',
-            'yii-bootstrap4' => '\yii\bootstrap4\ActiveForm',
+            'rbac' => \yii\rbac\Permission::class,
+            #'db-mysql' => \yii\db\mysql\Schema::class,
+            'yii-bootstrap4' => \yii\bootstrap4\ActiveForm::class,
         ];
         $setupIncomplete = in_array(false, array_map('class_exists', $requiredPackages));
 
