@@ -27,7 +27,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <header>
-    <?= Html::a($this->getApp()->name,$this->getApp()->homeUrl); ?>
+    <?= Html::a($this->getApp()->name, $this->getApp()->homeUrl); ?>
     <?= Menu::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
