@@ -44,9 +44,9 @@ $this->title = 'My Yii Application';
 
                 <p>More information about Yii 3.x Framework online:</p>
 
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/"><?= $this->app->t('yii-base-web', 'Yii Forum') ?> &raquo;</a></p>
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/"><?= $this->app->t('yii-base-web', 'Yii Documentation') ?> &raquo;</a></p>
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/"><?= $this->app->t('yii-base-web', 'Yii Extensions') ?> &raquo;</a></p>
+                <p><a class="btn btn-light" href="http://www.yiiframework.com/forum/"><?= $this->app->t('yii-base-web', 'Yii Forum') ?> &raquo;</a></p>
+                <p><a class="btn btn-light" href="http://www.yiiframework.com/doc/"><?= $this->app->t('yii-base-web', 'Yii Documentation') ?> &raquo;</a></p>
+                <p><a class="btn btn-light" href="http://www.yiiframework.com/extensions/"><?= $this->app->t('yii-base-web', 'Yii Extensions') ?> &raquo;</a></p>
             </div>
         </div>
 
