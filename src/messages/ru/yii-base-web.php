@@ -28,7 +28,7 @@ return [
     'Contact' => 'Контакты',
     'Login' => 'Вход',
     'Congratulations!' => 'Поздравляем!',
-    'You have successfully created your Yii-powered application.' => 'Вы успешно создали ваше приложение на Yii.',
+    'You have successfully created your Yii-powered application.' => 'Вы успешно создали приложение на Yii.',
     'Get started with Yii' => 'Начать знакомство с Yii',
     'Yii Documentation' => 'Документация Yii',
     'Yii Forum' => 'Форум Yii',
