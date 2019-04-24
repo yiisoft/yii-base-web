@@ -73,7 +73,7 @@ class SiteController extends Controller
     public function actionLogin()
     {
         $requiredPackages = [
-            'rbac' => \yii\rbac\Permission::class,
+            'rbac' => \Yiisoft\Rbac\Permission::class,
             #'db-mysql' => \yii\db\mysql\Schema::class,
             'yii-bootstrap4' => \Yiisoft\Yii\Bootstrap4\ActiveForm::class,
         ];
