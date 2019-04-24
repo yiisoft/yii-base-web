@@ -1,12 +1,12 @@
 <?php
 
 /** @var yii\web\View $this */
-/** @var yii\bootstrap4\ActiveForm $form */
+/** @var Yiisoft\Yii\Bootstrap4\ActiveForm $form */
 /** @var yii\app\forms\ContactForm $model */
 /** @var bool $setupIncomplete */
 /** @var string[] $requiredPackages */
 
-use yii\bootstrap4\ActiveForm;
+use Yiisoft\Yii\Bootstrap4\ActiveForm;
 use yii\captcha\Captcha;
 use yii\helpers\Html;
 

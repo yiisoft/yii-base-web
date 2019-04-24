@@ -75,7 +75,7 @@ class SiteController extends Controller
         $requiredPackages = [
             'rbac' => \yii\rbac\Permission::class,
             #'db-mysql' => \yii\db\mysql\Schema::class,
-            'yii-bootstrap4' => \yii\bootstrap4\ActiveForm::class,
+            'yii-bootstrap4' => \Yiisoft\Yii\Bootstrap4\ActiveForm::class,
         ];
         $setupIncomplete = in_array(false, array_map('class_exists', $requiredPackages));
 
@@ -124,7 +124,7 @@ class SiteController extends Controller
 
         $requiredPackages = [
             'yii-jquery' => '\yii\jquery\ActiveFormClientScript',
-            'yii-bootstrap4' => '\yii\bootstrap4\ActiveForm',
+            'yii-bootstrap4' => '\Yiisoft\Yii\Bootstrap4\ActiveForm',
             'yii-captcha' => '\yii\captcha\Captcha',
         ];
         $setupIncomplete = in_array(false, array_map('class_exists', $requiredPackages));
