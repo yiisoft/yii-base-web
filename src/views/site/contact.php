@@ -52,7 +52,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php $form = ActiveForm::begin([
                     'id' => 'contact-form',
-                    'as clientScript' => \yii\jquery\ActiveFormClientScript::class,
+                    'as clientScript' => \Yiisoft\Yii\JQuery\ActiveFormClientScript::class,
                 ]); ?>
 
                     <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>

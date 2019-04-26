@@ -123,7 +123,7 @@ class SiteController extends Controller
         }
 
         $requiredPackages = [
-            'yii-jquery' => '\yii\jquery\ActiveFormClientScript',
+            'yii-jquery' => '\Yiisoft\Yii\JQuery\ActiveFormClientScript',
             'yii-bootstrap4' => '\Yiisoft\Yii\Bootstrap4\ActiveForm',
             'yii-captcha' => '\Yiisoft\Yii\Captcha\Captcha',
         ];
