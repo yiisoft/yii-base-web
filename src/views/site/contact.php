@@ -7,7 +7,7 @@
 /** @var string[] $requiredPackages */
 
 use Yiisoft\Yii\Bootstrap4\ActiveForm;
-use yii\captcha\Captcha;
+use Yiisoft\Yii\Captcha\Captcha;
 use yii\helpers\Html;
 
 $this->title = 'Contact';

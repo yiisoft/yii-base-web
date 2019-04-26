@@ -48,7 +48,7 @@ class SiteController extends Controller
                 '__class' => \yii\web\ErrorAction::class,
             ],
             'captcha' => [
-                '__class' => \yii\captcha\CaptchaAction::class,
+                '__class' => \Yiisoft\Yii\Captcha\CaptchaAction::class,
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
@@ -125,7 +125,7 @@ class SiteController extends Controller
         $requiredPackages = [
             'yii-jquery' => '\yii\jquery\ActiveFormClientScript',
             'yii-bootstrap4' => '\Yiisoft\Yii\Bootstrap4\ActiveForm',
-            'yii-captcha' => '\yii\captcha\Captcha',
+            'yii-captcha' => '\Yiisoft\Yii\Captcha\Captcha',
         ];
         $setupIncomplete = in_array(false, array_map('class_exists', $requiredPackages));
 
