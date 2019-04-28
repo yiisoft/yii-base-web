@@ -1,11 +1,11 @@
 <?php
 /**
- * This is a configuration file for the [[\yii\console\controllers\MessageController]] console command.
+ * This is a configuration file for the [[\Yiisoft\Yii\Console\Controllers\MessageController]] console command.
  *
  * In order to update translations, run the following console command:
  * php yii message messages/config.php
  *
- * @see yii\console\controllers\MessageController
+ * @see Yiisoft\Yii\Console\Controllers\MessageController
  */
 
 return [

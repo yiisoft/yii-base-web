@@ -7,8 +7,8 @@
 
 namespace yii\app\commands;
 
-use yii\console\Controller;
-use yii\console\ExitCode;
+use Yiisoft\Yii\Console\Controller;
+use Yiisoft\Yii\Console\ExitCode;
 
 /**
  * This command echoes the first argument that you have entered.
