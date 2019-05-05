@@ -74,7 +74,7 @@ class SiteController extends Controller
     {
         $requiredPackages = [
             'rbac' => \Yiisoft\Rbac\Permission::class,
-            #'db-mysql' => \yii\db\mysql\Schema::class,
+            #'db-mysql' => \Yiisoft\Db\Mysql\Schema::class,
             'yii-bootstrap4' => \Yiisoft\Yii\Bootstrap4\ActiveForm::class,
         ];
         $setupIncomplete = in_array(false, array_map('class_exists', $requiredPackages));

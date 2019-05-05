@@ -35,7 +35,7 @@ return [
         '__class' => Yiisoft\Yii\SwiftMailer\Mailer::class,
     ],
     'db' => array_filter([
-        '__class' => yii\db\Connection::class,
+        '__class' => Yiisoft\Db\Connection::class,
         'dsn' => $params['db.dsn'],
         'username' => $params['db.username'],
         'password' => $params['db.password'],
