@@ -1,6 +1,6 @@
 <?php
 
-namespace yii\app\forms;
+namespace Yiisoft\Yii\Base\Web\Forms;
 
 use yii\base\Model;
 use yii\mail\MailerInterface;

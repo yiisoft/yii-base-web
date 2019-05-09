@@ -3,8 +3,8 @@
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-use yii\app\widgets\Alert;
-use yii\app\assets\AppAsset;
+use Yiisoft\Yii\Base\Web\Widgets\Alert;
+use Yiisoft\Yii\Base\Web\Assets\AppAsset;
 use yii\helpers\Html;
 use yii\helpers\Yii;
 use yii\widgets\Menu;

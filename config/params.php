@@ -10,5 +10,5 @@ return [
     'db.username'   => 'root',
     'db.password'   => '',
 
-    'favicon.ico' => '@yii/app/../public/favicon.ico',
+    'favicon.ico' => '@Yiisoft/Yii/Base/Web/../public/favicon.ico',
 ];

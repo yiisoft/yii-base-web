@@ -2,7 +2,7 @@
 
 /** @var yii\web\View $this */
 /** @var Yiisoft\Yii\Bootstrap4\ActiveForm $form */
-/** @var yii\app\forms\LoginForm $model */
+/** @var Yiisoft\Yii\Base\Web\Forms\LoginForm $model */
 /** @var bool $setupIncomplete */
 /** @var string[] $requiredPackages */
 

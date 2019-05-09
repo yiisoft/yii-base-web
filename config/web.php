@@ -2,10 +2,10 @@
 
 return [
     'app' => [
-        'controllerNamespace' => yii\app\controllers::class,
+        'controllerNamespace' =>  \Yiisoft\Yii\Base\Web\Controllers::class,
     ],
     'user' => [
-        'identityClass' => yii\app\models\User::class, // User must implement the IdentityInterface
+        'identityClass' =>  \Yiisoft\Yii\Base\Web\Models\User::class, // User must implement the IdentityInterface
     ],
     'request' => [
         'enableCookieValidation' => false,

@@ -34,8 +34,10 @@ src/
   commands/           contains console commands (controllers)
   controllers/        contains Web controller classes
   mail/               contains view files for e-mails
+  messages/           contains translations files
   models/             contains model classes
   views/              contains view files for the Web application
+  widgets/            contains Widgets
 vendor/             contains dependent 3rd-party packages
 .env
 .env.dist
@@ -45,7 +47,7 @@ composer.json
 REQUIREMENTS
 ------------
  
-The minimum requirement by this project template that your Web server supports PHP 7.1.
+The minimum requirement by this project template that your Web server supports PHP 7.2.
 
 
 INSTALLATION

@@ -2,6 +2,6 @@
 
 return [
     'app' => [
-        'controllerNamespace' => yii\app\commands::class,
+        'controllerNamespace' => \Yiisoft\Yii\Base\Web\Commands::class,
     ],
 ];

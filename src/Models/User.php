@@ -1,6 +1,6 @@
 <?php
 
-namespace yii\app\models;
+namespace Yiisoft\Yii\Base\Web\Models;
 
 use Yiisoft\ActiveRecord\ActiveRecord;
 use yii\exceptions\NotSupportedException;

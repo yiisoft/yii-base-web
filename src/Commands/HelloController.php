@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace yii\app\commands;
+namespace Yiisoft\Yii\Base\Web\Commands;
 
 use Yiisoft\Yii\Console\Controller;
 use Yiisoft\Yii\Console\ExitCode;

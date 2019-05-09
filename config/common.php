@@ -3,7 +3,7 @@
 return [
     'app' => [
         'basePath' => dirname(__DIR__) . '/src',
-        'controllerNamespace' => \yii\app\commands::class,
+        'controllerNamespace' => \Yiisoft\Yii\Base\Web\Commands::class,
         /*
         'controllerMap' => [
             'fixture' => [ // Fixture generation command line.

@@ -1,6 +1,6 @@
 <?php
 
-namespace yii\app\widgets;
+namespace Yiisoft\Yii\Base\Web\Widgets;
 
 use yii\helpers\Json;
 use yii\widgets\Widget;
