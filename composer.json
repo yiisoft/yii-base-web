@@ -33,7 +33,8 @@
         "yiisoft/active-record": "^3.0@dev",
         "yiisoft/yii-swiftmailer": "dev-master",
         "vlucas/phpdotenv": "^2.5",
-        "hiqdev/composer-config-plugin": "dev-master"
+        "hiqdev/composer-config-plugin": "dev-master",
+        "nyholm/psr7": "^1.0"
     },
     "require-dev": {
         "foxy/foxy": "^1.0",
