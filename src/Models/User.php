@@ -6,7 +6,7 @@ use Yiisoft\ActiveRecord\ActiveRecord;
 use yii\exceptions\NotSupportedException;
 use yii\behaviors\TimestampBehavior;
 use yii\helpers\Yii;
-use yii\web\IdentityInterface;
+use Yiisoft\Web\IdentityInterface;
 
 /**
  * User model
