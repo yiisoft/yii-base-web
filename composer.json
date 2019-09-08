@@ -12,16 +12,6 @@
         "wiki": "http://www.yiiframework.com/wiki/",
         "irc": "irc://irc.freenode.net/yii"
     },
-    "authors": [
-        {
-            "name": "Alexander Makarov",
-            "email": "sam@rmcreative.ru"
-        },
-        {
-            "name": "Paul Klimov",
-            "email": "klimov.paul@gmail.com"
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
