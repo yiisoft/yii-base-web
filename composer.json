@@ -2,7 +2,11 @@
     "name": "yiisoft/yii-base-web",
     "type": "library",
     "description": "Yii Framework Web Application Base",
-    "keywords": ["yii", "framework", "application"],
+    "keywords": [
+        "yii",
+        "framework",
+        "application"
+    ],
     "homepage": "https://github.com/yiisoft/yii-base-web",
     "license": "BSD-3-Clause",
     "support": {
@@ -50,15 +54,20 @@
         }
     ],
     "autoload": {
-        "psr-4": {"Yiisoft\\Yii\\Base\\Web\\": "src"}
+        "psr-4": {
+            "Yiisoft\\Yii\\Base\\Web\\": "src"
+        }
     },
     "autoload-dev": {
-        "psr-4": {"Yiisoft\\Yii\\Base\\Web\\Tests\\": "tests"}
+        "psr-4": {
+            "Yiisoft\\Yii\\Base\\Web\\Tests\\": "tests"
+        }
     },
     "config": {
         "process-timeout": 1800,
         "fxp-asset": {
             "enabled": false
-        }
+        },
+        "sort-packages": true
     }
 }
