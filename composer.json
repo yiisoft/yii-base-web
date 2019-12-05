@@ -19,7 +19,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.2.0",
+        "php": "^7.4",
         "yiisoft/yii-web": "^3.0@dev",
         "yiisoft/di": "^3.0@dev",
         "yiisoft/log": "^3.0@dev",
@@ -35,7 +35,7 @@
         "yiisoft/yii-debug": "dev-master",
         "yiisoft/yii-gii": "dev-master",
         "yiisoft/yii-bootstrap4": "dev-master",
-        "phpunit/phpunit": "^7.3"
+        "phpunit/phpunit": "^8.4"
     },
     "extra": {
         "branch-alias": {
