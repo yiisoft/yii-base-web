@@ -19,7 +19,7 @@ features to your application.
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii-base-web.svg)](https://packagist.org/packages/yiisoft/yii-base-web)
 [![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii-base-web.svg)](https://packagist.org/packages/yiisoft/yii-base-web)
-[![Build Status](https://travis-ci.org/yiisoft/yii-base-web.svg?branch=master)](https://travis-ci.org/yiisoft/yii-base-web)
+[![Build Status](https://travis-ci.com/yiisoft/yii-base-web.svg?branch=master)](https://travis-ci.com/yiisoft/yii-base-web)
 
 DIRECTORY STRUCTURE
 -------------------
