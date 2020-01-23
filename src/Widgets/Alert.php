@@ -55,7 +55,7 @@ class Alert extends Widget
         $flashes = $session->getAllFlashes();
         $appendClass = isset($this->options['class']) ? ' ' . $this->options['class'] : '';
         $html = '';
-        
+
         foreach ($flashes as $type => $flash) {
             if (!isset($this->alertTypes[$type])) {
                 continue;

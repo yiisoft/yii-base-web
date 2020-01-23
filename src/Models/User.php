@@ -34,7 +34,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return '{{%user}}';
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -44,7 +44,7 @@ class User extends ActiveRecord implements IdentityInterface
             TimestampBehavior::class,
         ];
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -55,7 +55,7 @@ class User extends ActiveRecord implements IdentityInterface
             ['status', 'in', 'range' => [self::STATUS_ACTIVE, self::STATUS_DELETED]],
         ];
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -63,7 +63,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return static::findOne(['id' => $id, 'status' => self::STATUS_ACTIVE]);
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -71,7 +71,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
     }
-    
+
     /**
      * Finds user by username
      *
@@ -82,7 +82,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return static::findOne(['username' => $username, 'status' => self::STATUS_ACTIVE]);
     }
-    
+
     /**
      * Finds user by password reset token
      *
@@ -94,13 +94,13 @@ class User extends ActiveRecord implements IdentityInterface
         if (!static::isPasswordResetTokenValid($token)) {
             return null;
         }
-        
+
         return static::findOne([
             'password_reset_token' => $token,
             'status' => self::STATUS_ACTIVE,
         ]);
     }
-    
+
     /**
      * Finds out if password reset token is valid
      *
@@ -112,12 +112,12 @@ class User extends ActiveRecord implements IdentityInterface
         if (empty($token)) {
             return false;
         }
-        
+
         $timestamp = (int) substr($token, strrpos($token, '_') + 1);
         $expire = Yii::getApp()->params['user.passwordResetTokenExpire'];
         return $timestamp + $expire >= time();
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -125,7 +125,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->getPrimaryKey();
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -133,7 +133,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->auth_key;
     }
-    
+
     /**
      * {@inheritdoc}
      */
@@ -141,7 +141,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return $this->getAuthKey() === $authKey;
     }
-    
+
     /**
      * Validates password
      *
@@ -152,7 +152,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return Yii::getApp()->security->validatePassword($password, $this->password_hash);
     }
-    
+
     /**
      * Generates password hash from password and sets it to the model
      *
@@ -162,7 +162,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_hash = Yii::getApp()->security->generatePasswordHash($password);
     }
-    
+
     /**
      * Generates "remember me" authentication key
      */
@@ -170,7 +170,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->auth_key = Yii::getApp()->security->generateRandomString();
     }
-    
+
     /**
      * Generates new password reset token
      */
@@ -178,7 +178,7 @@ class User extends ActiveRecord implements IdentityInterface
     {
         $this->password_reset_token = Yii::getApp()->security->generateRandomString() . '_' . time();
     }
-    
+
     /**
      * Removes password reset token
      */
