@@ -46,9 +46,6 @@ class Alert extends Widget
     public $closeButton = [];
 
 
-    /**
-     * {@inheritdoc}
-     */
     public function run()
     {
         $session = $this->app->session;
