@@ -65,7 +65,8 @@ class Alert extends Widget
                         'id' => $this->getId() . '-' . $type . '-' . $i,
                         'type' => $type,
                         'message' => $message
-                    ]);
+                    ]
+                );
             }
             $html .= "</data>";
 

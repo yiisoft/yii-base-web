@@ -11,7 +11,6 @@ use Yiisoft\Yii\Base\Web\Forms\ContactForm;
 
 class SiteController extends Controller
 {
-
     public function behaviors()
     {
         return [
