@@ -35,8 +35,8 @@ AppAsset::register($this);
             ['label' => $this->app->t('yii-base-web', 'About'), 'url' => ['/site/about']],
             ['label' => $this->app->t('yii-base-web', 'Contact'), 'url' => ['/site/contact']],
            true /* TODO: This should be $this->getApp()->user->isGuest */ ? (
-                ['label' => $this->app->t('yii-base-web', 'Login'), 'url' => ['/site/login']]
-            ) : (
+               ['label' => $this->app->t('yii-base-web', 'Login'), 'url' => ['/site/login']]
+           ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
