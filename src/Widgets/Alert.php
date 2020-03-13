@@ -46,9 +46,6 @@ class Alert extends Widget
     public $closeButton = [];
 
 
-    /**
-     * {@inheritdoc}
-     */
     public function run()
     {
         $session = $this->app->session;
@@ -68,7 +65,8 @@ class Alert extends Widget
                         'id' => $this->getId() . '-' . $type . '-' . $i,
                         'type' => $type,
                         'message' => $message
-                    ]);
+                    ]
+                );
             }
             $html .= "</data>";
 
