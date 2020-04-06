@@ -35,7 +35,7 @@
         "yiisoft/yii-debug": "dev-master",
         "yiisoft/yii-gii": "dev-master",
         "yiisoft/yii-bootstrap4": "dev-master",
-        "phpunit/phpunit": "^8.4"
+        "phpunit/phpunit": "^8.4 || ^9.0"
     },
     "extra": {
         "branch-alias": {
