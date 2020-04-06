@@ -26,7 +26,7 @@
         "yiisoft/cache": "^3.0@dev",
         "yiisoft/active-record": "^3.0@dev",
         "yiisoft/mailer": "dev-master",
-        "vlucas/phpdotenv": "^2.5",
+        "vlucas/phpdotenv": "^2.5 || ^4.0",
         "yiisoft/composer-config-plugin": "dev-master",
         "nyholm/psr7": "^1.0"
     },
