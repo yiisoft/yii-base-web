@@ -8,8 +8,7 @@
 
 This package is one of the three [Yii Framework] [application bases](https://github.com/yiisoft/docs/blob/master/000-packages.md#yii-project-template-and-application-bases) provided for rapidly creating projects.
 
-> This template is still **experimental** and provided to help you discover Yii 3.
-> If you are looking to develop with the last stable Yii version, use [yii2-app-basic](https://github.com/yiisoft/yii2-app-basic) instead
+> **Note**: There is now [application template for Yii 3](https://github.com/yiisoft/app). Please use it instead.
 
 The template contains the basic features including user login/logout and a contact page.
 It includes all commonly used configurations that would allow you to focus on adding new
